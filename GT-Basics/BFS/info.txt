@@ -1,0 +1,40 @@
+Description:
+The algorithm takes as input an unweighted graph and the id of the source vertex s.
+The input graph can be directed or undirected, it does not matter to the algorithm.
+
+
+How It Works:
+The algorithm can be understood as a fire spreading on the graph: at the zeroth step only the source s is on fire.
+At each step, the fire burning at each vertex spreads to all of its neighbors.
+In one iteration of the algorithm, the "ring of fire" is expanded in width by one unit.
+
+1.We create a queue q and push the source element in q .
+2.Create an array visited[] to store the visited nodes and mark visited[source]==true.
+3.Create an array parent[] to store the parent of the nodes (it helps to trace the path).
+4.Create an array dist[] to store the distance of each node from the source(proves helpful in many questions).
+5.Untill the queue is not empty we do following things,
+  a. Create a dfs(source) function
+  a. Run a loop over all the nodes connected to the current source node and keep on pushing the nodes.
+  b. While visiting the node, pop() it from the queue.  If marked as visited[node]=false and then only run the function dfs(node).
+  d. dist[] and parent[] can also be filled (see the code (link)) 
+6.Shortest or longest path from source u can also be traversed using parent[] at last (this is not prsent in standard algo it is just the extension). 
+
+
+Time Complexity:
+If number of nodes are n , and number of edges are m.
+The running time complexity of the algorithm is O(n+m).
+It can be seen that the algorithm runs for atmost n times as after n times every node will be visited.
+And during each iteration algorithm runs for its connected nodes (which cann't be more then m).
+
+
+Applications:
+1.Find the shortest path from a source to other vertices in an unweighted graph.
+2.Find all connected components in an undirected graph in O(n+m) time.
+3.Finding the shortest path in a graph with weights 0 or 1. Although DFS is not for the weigthed graphs,
+  yet it can be modified for this problem.
+4.Finding the shortest cycle in a directed unweighted graph.
+5.Find all the edges that lie on any shortest path between a given pair of vertices (a,b).
+6.Find the shortest path of even length from a source vertex s to a target vertex t in an unweighted graph.
+
+
+Reference:  https://cp-algorithms.com/graph/breadth-first-search.html
