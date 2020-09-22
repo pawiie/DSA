@@ -37,4 +37,9 @@ Applications:
 6.Find the shortest path of even length from a source vertex s to a target vertex t in an unweighted graph.
 
 
+Pratice Problems:
+1.https://www.spoj.com/problems/AKBAR/
+2.https://www.spoj.com/problems/MICEMAZE/
+3.https://www.spoj.com/problems/MULTII/
+
 Reference:  https://cp-algorithms.com/graph/breadth-first-search.html
