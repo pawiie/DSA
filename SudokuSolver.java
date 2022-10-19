@@ -1,4 +1,4 @@
-```java
+
 import java.util.ArrayList;
 
 public class Maze {
@@ -93,4 +93,6 @@ public class Maze {
 
         if (c < maze[0].length - 1) {
             pathRestrictions(p + 'R', maze, r, c+1);
-        }}}
+        }
+       }
+     }
