@@ -1,4 +1,4 @@
-public class Nk {
+public class Nknights {
     public static void main(String[] args) {
         int n = 4;
         boolean[][] Bd = new boolean[n][n];
@@ -58,7 +58,7 @@ public class Nk {
         return true;
     }
 
-    // do not repeat yourself, hence created this function
+   
     static boolean isValid(boolean[][] Bd, int row, int col) {
         if (row >= 0 && row < Bd.length && col >= 0 && col < Bd.length) {
             return true;
